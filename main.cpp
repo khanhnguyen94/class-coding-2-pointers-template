@@ -12,24 +12,26 @@ namespace example1 {
     void example() {
         //pointers basic 1
         //TODO 1 - create var1 of type int
+        int var1;
+        int *ptr1 = &var1;
         //TODO 1 - create a character array var2 that can hold 10 elements
-
-
-        //TODO 1
-        cout << "Size of var1 variable: ";
+        char var2[10];
 
         //TODO 1
-        cout << "Size of var2 variable: ";
+        cout << "Size of var1 variable: " << sizeof(var1) << endl;
 
         //TODO 1
-        cout << "Address of var1 variable: ";
+        cout << "Size of var2 variable: " << sizeof(var2) << endl;
 
         //TODO 1
-        cout << "Address of var2 variable: ";
+        cout << "Address of var1 variable: " << ptr1 << endl;
 
+        //TODO 1
+        cout << "Address of var2 variable: " << &var2 << endl;
     }
 }
 
+/*
 namespace example2 {
     void example() {
         //pointers basic 2
@@ -297,11 +299,11 @@ namespace example13 {
 
     }
 }
-
+*/
 
 int main() {
 
-    //example1::example();
+    example1::example();
     //example2::example();
     //example3::example();
     //example4::example();
