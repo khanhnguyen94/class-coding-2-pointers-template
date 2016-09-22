@@ -59,29 +59,34 @@ namespace example2 {
         cout << ip << "\n";
     }
 }
-/*
+
 namespace example3 {
     void example() {
         //pointer addition
 
         //TODO 3 - integer array of size MAX
+        int array[MAX];
         //TODO 3 - integer pointer
-
+        int *ptr3;
         // let us have array address in pointer.
 
         //TODO 3 - point pointer to variable
+        ptr3 = array;
         for (int i = 0; i < MAX; i++) {
-            //TODO 3
-            cout << "Address of var[" << i << "] = ";
 
             //TODO 3
-            cout << "Value of var[" << i << "] = ";
+            cout << "Address of var[" << i << "] = " << &array[i] ;
+
+            //TODO 3
+            cout << "Value of var[" << i << "] = "<< array[i];
 
             //TODO 3// point to the next location
+            ptr3++;
         }
     }
 }
 
+/*
 namespace example4 {
     void example() {
 
