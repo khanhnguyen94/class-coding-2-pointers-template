@@ -75,10 +75,10 @@ namespace example3 {
         for (int i = 0; i < MAX; i++) {
 
             //TODO 3
-            cout << "Address of var[" << i << "] = " << &array[i] ;
+            cout << "Address of var[" << i << "] = " << &array[i] << "\n";
 
             //TODO 3
-            cout << "Value of var[" << i << "] = "<< array[i];
+            cout << "Value of var[" << i << "] = "<< array[i] << "\n";
 
             //TODO 3// point to the next location
             ptr3++;
@@ -86,25 +86,27 @@ namespace example3 {
     }
 }
 
-/*
+
 namespace example4 {
     void example() {
 
         //pointer subtraction
 
         //TODO 4 - integer array of size MAX
+        int arr[MAX];
         //TODO 4 - integer pointer
-
+        int *ptrgs;
         //TODO 4// let us have address of the last element in pointer.
-
+        ptrgs = &arr[MAX-1];
         for (int i = MAX; i > 0; i--) {
             //TODO 4
-            cout << "Address of var[" << i << "] = ";
+            cout << "Address of var[" << i << "] = " << ptrgs << "\n";
 
             //TODO 4
-            cout << "Value of var[" << i << "] = ";
+            cout << "Value of var[" << i << "] = " << *ptrgs << "\n";
 
             //TODO 4
+            ptrgs--;
             // point to the previous location
         }
     }
@@ -306,14 +308,13 @@ namespace example13 {
 
     }
 }
-*/
 
 int main() {
 
-    example1::example();
-    example2::example();
+    //example1::example();
+    //example2::example();
     //example3::example();
-    //example4::example();
+    example4::example();
     //example5::example();
     //example6::example();
     //example7::example();
