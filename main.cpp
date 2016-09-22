@@ -8,6 +8,7 @@
 #define MAX 3
 using namespace std;
 
+//Richard
 namespace example1 {
     void example() {
         //pointers basic 1
@@ -31,6 +32,7 @@ namespace example1 {
     }
 }
 
+//Nemi
 namespace example2 {
     void example() {
         //pointers basic 2
@@ -60,6 +62,7 @@ namespace example2 {
     }
 }
 
+//Jay
 namespace example3 {
     void example() {
         //pointer addition
@@ -86,7 +89,7 @@ namespace example3 {
     }
 }
 
-
+//Garish
 namespace example4 {
     void example() {
 
@@ -112,27 +115,32 @@ namespace example4 {
     }
 }
 
+//Khanh
 namespace example5 {
     void example() {
 
         //comparing pointers
 
         //TODO 5 - integer array of size MAX
+        int arr[MAX] = {42};
         //TODO 5 - integer pointer
+        int* ptr;
 
         //TODO 5// let us have address of the first element in pointer.
         int i = 0;
+        ptr = &arr[0];
         //TODO 5 iterate from &variable[MAX-1] to ptr
-        while (42) {
+        while (i < MAX) {
 
             //TODO 5
             cout << "Address of var[" << i << "] = ";
+            cout << &ptr[MAX-i] << "\n";
 
             //TODO 5
             cout << "Value of var[" << i << "] = ";
+            cout << *ptr << "\n";
 
-            //TODO 5// point to the next location
-
+          //TODO 5// point to the next location
             i++;
         }
     }
@@ -311,11 +319,11 @@ namespace example13 {
 
 int main() {
 
-    //example1::example();
-    //example2::example();
-    //example3::example();
+    example1::example();
+    example2::example();
+    example3::example();
     example4::example();
-    //example5::example();
+    example5::example();
     //example6::example();
     //example7::example();
     //example8::example();
