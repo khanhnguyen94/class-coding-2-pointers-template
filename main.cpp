@@ -140,7 +140,7 @@ namespace example5 {
             cout << "Value of var[" << i << "] = ";
             cout << *ptr << "\n";
 
-          //TODO 5// point to the next location
+            //TODO 5// point to the next location
             i++;
         }
     }
@@ -178,14 +178,18 @@ namespace example8 {
 
         //array of pointers
         int var[MAX] = {10, 100, 200};
+
         //TODO 8 define an integer pointer of size MAX
+        int* ptrArr[MAX];
 
         for (int i = 0; i < MAX; i++) {
             //TODO 8// assign the address of integer.
+            ptrArr[i] = &var[i];
         }
         for (int i = 0; i < MAX; i++) {
             //TODO 8
             cout << "Value of var[" << i << "] = ";
+            cout << *ptrArr[i] << "\n";
         }
     }
 }
@@ -194,13 +198,13 @@ namespace example9 {
     void example() {
 
         //array of names
-
-        //TODO 9 - create a character pointer array of size MAX
+        // TODO 9 - create a character pointer array of size MAX
+        char* ptrArr[MAX] = {"hey", "ok", "bye"};
 
         for (int i = 0; i < MAX; i++) {
             //TODO 9
             cout << "Value of names[" << i << "] = ";
-
+            cout << ptrArr[i] << "\n";
         }
     }
 }
@@ -209,8 +213,9 @@ namespace example10 {
     void example() {
         int var;
         int *ptr;
-        //TODO 10 - create a pointer to pointer
 
+        //TODO 10 - create a pointer to pointer
+        int** pptr;
 
         var = 3000;
 
@@ -218,13 +223,14 @@ namespace example10 {
         ptr = &var;
 
         //TODO 10// take the address of ptr using address of operator &
+        pptr = &ptr;
 
         // take the value using pptr
         cout << "Value of var :" << var << endl;
         cout << "Value available at *ptr :" << *ptr << endl;
-        //TODO 10
-        cout << "Value available at **pptr :";
 
+        //TODO 10
+        cout << "Value available at **pptr :" << **pptr << "\n";
     }
 }
 
@@ -320,15 +326,21 @@ namespace example13 {
 int main() {
 
     example1::example();
+    cout << "\n";
     example2::example();
+    cout << "\n";
     example3::example();
+    cout << "\n";
     example4::example();
+    cout << "\n";
     example5::example();
+    cout << "\n";
     //example6::example();
     //example7::example();
     //example8::example();
-    //example9::example();
-    //example10::example();
+    example9::example();
+    cout << "\n";
+    example10::example();
     //example11::example();
     //example12::example();
     //example13::example();
